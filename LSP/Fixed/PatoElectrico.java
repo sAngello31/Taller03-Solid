@@ -9,11 +9,10 @@ public class PatoElectrico implements Animal {
 	}
 	
 	public void emitirsonido() {
-		if(tieneBateria()) {
+		if(!tieneBateria()) {
+			CargarBateria();
 			System.out.println("Cuack!");
-		} else {
-			System.out.println("No tengo bateria, recargame :(");
-		}
+		} 
 	}
 	
 	private boolean tieneBateria() {
@@ -26,9 +25,11 @@ public class PatoElectrico implements Animal {
 			return false;
 		}
 	}
+
+	public void CargarBateria() {}
 	
 	public void setPila(int n) {
 		this.bateria = n;
-	}	
+	}
 	
 }
