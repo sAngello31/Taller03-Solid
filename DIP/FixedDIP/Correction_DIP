@@ -1,0 +1,24 @@
+//Correction_DIP
+//Entonces lo que hariamos para evitar tener que modificar todos los metodos 
+//Simplemente hariamos una interfaz Conection. Así, sin importar el tipo 
+//de conexión que se le pase al módulo AccesToCredentials, 
+//ni este ni sus instancias tendrán que cambiar, 
+//por lo que nos ahorraremos mucho trabajo
+	
+	
+	interface Conexion {  
+		Credentials getCredentials();
+	    void setCredentials();
+	}
+	class AccesToCredentials implements Conexion{
+
+	    private Conexion conexion;
+
+	    public AccesToCredentials(Conexion conexion){
+	        this.conexion = conexion;
+	    }
+
+	    Credentials getCredentials(){
+	    conexion.getCredentials();				
+	    }
+	}

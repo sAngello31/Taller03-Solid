@@ -1,0 +1,25 @@
+Violation_DIP
+
+//Queremos acceder a los datos de una base de Datos en MYSQL
+//El problema es, que pasaria si en un futuro queremos cambiar de API,
+//tendriamos que modificar todos los metodos de la Clase AccesToCredentials
+
+
+	class Loggin{  
+	    //...
+	    void getCredentials(){ ... }
+	}
+
+	class AccesToCredentials {
+
+	    private Loggin MYSQLlogg;
+
+	    public AccesToCredentials(Loggin logg){
+	        this.MYSQLlogg = logg;
+	    }
+
+	    Credentials getCredentials(){
+	    logg.getCredentials();
+	        ...
+	    }
+	}
