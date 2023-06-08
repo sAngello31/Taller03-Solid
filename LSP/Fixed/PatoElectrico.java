@@ -29,6 +29,6 @@ public class PatoElectrico implements Animal {
 	
 	public void setPila(int n) {
 		this.bateria = n;
-	}
+	}	
 	
 }
