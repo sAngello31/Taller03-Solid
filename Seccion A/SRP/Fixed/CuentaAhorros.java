@@ -1,5 +1,5 @@
 
-public class CuentaAhorros {
+public class CuentaAhorros{
     String numeroCuenta;
     double balance;
     
@@ -11,20 +11,11 @@ public class CuentaAhorros {
         this.balance=balance;
     }
     
-    public String getNumeroCuenta(){
-        return numeroCuenta;
-    }
     
-    public double getBalance(){
-        return balance;
-    }
+    //Getters and Setters
     
     public void depositar(int valor){
         //metodo para depositar
     }
     
-    public double calculateIntereset(){
-        //metodo para calculara interes
-        return 0.0;
-    }
 }
